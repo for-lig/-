@@ -421,7 +421,6 @@ def translate_text(text: str, target_lang: str = "中文") -> str:
     except Exception as e:
         return f"翻译失败：{str(e)}"
 
-
 def _save_records_to_db(records):
     """写入股票数据到MySQL"""
     _init_stock_table()
@@ -717,6 +716,7 @@ def get_music_preview(song_name: str) -> str:
         return f"MUSIC_PREVIEW|{name}|{artist}|{tmp_file}"
     except Exception as e:
         return f"下载音频失败：{str(e)}"
+
 
 
 # ==================== 多任务 + 流式输出 ====================
